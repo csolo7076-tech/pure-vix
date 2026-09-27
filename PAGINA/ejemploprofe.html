@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+header{
+grid-area: uno;
+background-color: rgb(35, 156, 116);
+}
+
+nav{
+    grid-area: dos;
+    background-color: rgba(11, 11, 194, 0.699);
+}
+
+section{
+    grid-area: tres;
+    background-color: rgb(173, 106, 236);
+}
+
+footer{
+    grid-area: cua;
+    background-color: rgb(39, 149, 212);
+}
+
+body{
+    display: grid;
+    grid-template-rows: 200px 400px 400px 300px;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "uno"
+    "dos"
+    "tres"
+    "cua";
+
+    gap: 3px;
+
+}
+
+@media(max-width:700px){
+
+footer{
+    background-color: red; 
+}
+}
+</style>
+
+</head>
+<body>
+    
+    <header>
+      1
+
+    </header>
+
+    <nav>
+     2
+    </nav>
+
+    <section>
+        3
+    </section>
+
+    <footer>4
+
+    </footer>
+</body>
+</html>

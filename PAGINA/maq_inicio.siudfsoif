@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title></title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#f8fcfc;
+    color:#333;
+}
+
+
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    
+
+    display:flex;
+    justify-content:center;
+
+    padding:20px;
+
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+}
+
+nav ul{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+nav li{
+    color:white;
+    font-size:15px;
+    letter-spacing:1px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+nav li:hover{
+    color:#b6f1f5;
+}
+
+
+
+header{
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("https://mosaikosmetic.com/wp-content/uploads/2024/11/imagen4cd8d69ae45b43165be562a7e766a3df.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    padding:20px;
+}
+
+.todo{
+    color:white;
+    animation:fade 1.5s ease;
+}
+
+.todo h1{
+    font-size:110px;
+    font-weight:700;
+    letter-spacing:8px;
+
+    margin-bottom:20px;
+
+    text-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.todo p{
+    font-size:24px;
+    max-width:700px;
+    margin:auto;
+    line-height:1.6;
+    font-weight:300;
+}
+
+
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+
+.productos{
+    padding:100px 8%;
+}
+
+.productos h2{
+    text-align:center;
+    font-size:55px;
+    margin-bottom:70px;
+
+    color:#5aaeb8;
+}
+
+
+
+.contenedor{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:40px;
+}
+
+
+
+.cajita{
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.08);
+
+    transition:0.4s;
+}
+
+.cajita:hover{
+    transform:translateY(-12px);
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.15);
+}
+
+.cajita img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+
+    transition:0.4s;
+}
+
+.cajita:hover img{
+    transform:scale(1.05);
+}
+
+.info{
+    padding:30px;
+    text-align:center;
+}
+
+.info h3{
+    color:#4f98a4;
+    margin-bottom:15px;
+    font-size:30px;
+}
+
+.info p{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.precio{
+    font-size:34px;
+    color:#44b8c7;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+
+
+button{
+    border:none;
+
+    padding:14px 35px;
+
+    border-radius:50px;
+
+    background:linear-gradient(45deg,#7fd1da,#5fb7c2);
+
+    color:white;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.4s;
+}
+
+button:hover{
+    transform:scale(1.05);
+
+    box-shadow:
+    0 10px 20px rgba(95,183,194,0.4);
+}
+
+
+
+footer{
+    background:#102028;
+    color:white;
+
+    padding:70px 10%;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:40px;
+}
+
+footer h4{
+    font-size:22px;
+    margin-bottom:20px;
+    color:#8ce0e9;
+}
+
+footer p{
+    line-height:2;
+    color:#d7d7d7;
+}
+
+
+
+@media(max-width:768px){
+
+    .todo h1{
+        font-size:65px;
+    }
+
+    .todo p{
+        font-size:18px;
+    }
+
+    nav ul{
+        gap:15px;
+        flex-wrap:wrap;
+    }
+
+    .productos h2{
+        font-size:40px;
+    }
+
+}
+
+
+a{
+    color: #f8fcfc;
+}
+
+</style>
+</head>
+
+<body>
+
+
+
+<nav>
+    <ul>
+        <li>INICIO</li>
+        <li><a href="maq_productos.php">PRODUCTOS</a></li>
+        <li><a href="maq_logueo.php">INICIAR SESIÓN</a></li>
+        <li> <a href="maq_objetivos.php">OBJETIVOS</a></li>
+        <li><a href="maq_admin.php">ADMINISTRADOR</a></li>
+        <li><a href="maq_vendedor.php">VENDEDOR</a></li>
+        
+        
+    </ul>
+</nav>
+
+
+<header>
+
+    <div class="todo">
+
+        <h1>PURE SKIN</h1>
+
+        <p>
+            Cosmética natural diseñada para revelar
+            la belleza auténtica de tu piel.
+        </p>
+
+    </div>
+
+</header>
+
+
+
+<section class="productos">
+
+    <h2>Productos Estrella</h2>
+
+    <div class="contenedor">
+
+       
+
+        <div class="cajita">
+
+            <img src="https://i.pinimg.com/1200x/03/d0/f9/03d0f9a0df8c6f4e53ff26dc574c8b04.jpg">
+
+            <div class="info">
+
+                <h3>Mascarilla de Arroz</h3>
+
+                <p>
+                    Ilumina y suaviza la piel dejando
+                    un acabado natural y radiante.
+                </p>
+
+                <div class="precio">10 Bs</div>
+
+                <button>Ver más</button>
+
+            </div>
+
+        </div>
+
+      
+
+        <div class="cajita">
+
+            <img src="https://i.pinimg.com/736x/21/d5/e9/21d5e9c54d9f293a16402948038446ea.jpg">
+
+            <div class="info">
+
+                <h3>Aloe Vera</h3>
+
+                <p>
+                    Hidratación profunda y sensación
+                    refrescante para piel sensible.
+                </p>
+
+                <div class="precio">10 Bs</div>
+
+                <button>Ver más</button>
+
+            </div>
+
+        </div>
+
+       
+
+        <div class="cajita">
+
+            <img src="https://i.pinimg.com/736x/f3/f0/45/f3f045d02988681194c2fd019247ad2d.jpg">
+
+            <div class="info">
+
+                <h3>Mascarilla de Miel</h3>
+
+                <p>
+                    Nutre intensamente y deja
+                    la piel suave y luminosa.
+                </p>
+
+                <div class="precio">10 Bs</div>
+
+                <button>Ver más</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    <div>
+
+        <h4>PURE SKIN</h4>
+
+        <p>
+            Cosmética natural elaborada con ingredientes
+            saludables para cuidar tu piel cada día.
+        </p>
+
+    </div>
+
+    <div>
+
+        <h4>Contacto</h4>
+
+        <p>
+            Av. Uyuni - Cochabamba <br>
+            Horario: 9:00 - 18:00 <br>
+            Bolivia
+        </p>
+
+    </div>
+
+    

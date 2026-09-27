@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EcoNatural | Misión, Visión y Objetivos</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+background:#f8f6f0;
+color:#444;
+overflow-x:hidden;
+
+}
+
+/* HERO */
+
+.hero{
+
+height:100vh;
+
+background:
+linear-gradient(rgba(32,65,42,.60),rgba(32,65,42,.60)),
+url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+
+}
+
+.hero h1{
+
+font-size:70px;
+font-family:'Playfair Display',serif;
+color:white;
+
+}
+
+.hero p{
+
+margin-top:20px;
+font-size:22px;
+color:white;
+max-width:700px;
+line-height:1.8;
+
+}
+
+.hero a{
+
+display:inline-block;
+margin-top:40px;
+padding:15px 40px;
+background:#9CAF88;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:.3s;
+
+}
+
+.hero a:hover{
+
+background:#6b8f5d;
+transform:translateY(-3px);
+
+}
+
+/* SECCIÓN */
+
+section{
+
+padding:90px 8%;
+
+}
+
+.titulo{
+
+text-align:center;
+margin-bottom:60px;
+
+}
+
+.titulo h2{
+
+font-size:45px;
+font-family:'Playfair Display',serif;
+color:#355E3B;
+
+}
+
+.titulo p{
+
+margin-top:10px;
+color:#777;
+
+}
+
+/* TARJETAS */
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+}
+
+.card{
+
+background:white;
+
+padding:40px;
+
+border-radius:25px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.4s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+top:0;
+
+width:100%;
+
+height:8px;
+
+background:#7EA172;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.icono{
+
+font-size:55px;
+
+margin-bottom:20px;
+
+}
+
+.card h3{
+
+font-size:30px;
+
+margin-bottom:20px;
+
+color:#355E3B;
+
+font-family:'Playfair Display',serif;
+
+}
+
+.card p{
+
+line-height:1.9;
+
+}
+
+.card ul{
+
+padding-left:20px;
+
+}
+
+.card li{
+
+margin:15px 0;
+
+}
+
+/* FRASE */
+
+.frase{
+
+background:#355E3B;
+
+color:white;
+
+text-align:center;
+
+padding:80px 20px;
+
+}
+
+.frase h2{
+
+font-size:40px;
+
+font-family:'Playfair Display',serif;
+
+margin-bottom:20px;
+
+}
+
+.frase p{
+
+font-size:20px;
+
+max-width:800px;
+
+margin:auto;
+
+line-height:1.8;
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:#203D2A;
+
+color:white;
+
+text-align:center;
+
+padding:25px;
+
+}
+
+footer p{
+
+opacity:.9;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.titulo h2{
+
+font-size:35px;
+
+}
+
+.frase h2{
+
+font-size:30px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div>
+
+<h1>EcoNatural</h1>
+
+<p>
+
+Productos naturales elaborados con responsabilidad, calidad y respeto por el medio ambiente.
+
+</p>
+
+<a href="#contenido">Conoce más</a>
+
+</div>
+
+</header>
+
+<!-- CONTENIDO -->
+
+<section id="contenido">
+
+<div class="titulo">
+
+<h2>Nuestra Esencia</h2>
+
+<p>Trabajamos cada día para mejorar la calidad de vida de las personas.</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="icono">🎯</div>
+
+<h3>Objetivos</h3>
+
+<ul>
+
+<li>Ofrecer productos naturales de excelente calidad.</li>
+
+<li>Promover hábitos saludables.</li>
+
+<li>Brindar una atención cercana y confiable.</li>
+
+<li>Proteger el medio ambiente mediante prácticas responsables.</li>
+
+<li>Innovar constantemente para satisfacer las necesidades de nuestros clientes.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="icono">🌿</div>
+
+<h3>Misión</h3>
+
+<p>
+
+Brindar productos naturales que contribuyan al bienestar de las personas, ofreciendo calidad, confianza y un servicio responsable, fomentando un estilo de vida saludable y sostenible.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icono">🌎</div>
+
+<h3>Visión</h3>
+
+<p>
+
+Ser una empresa líder en productos naturales, reconocida por su innovación, compromiso con el medio ambiente y excelencia en la atención al cliente, generando un impacto positivo en la sociedad.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="frase">
+
+<h2>🌱 La naturaleza tiene el poder de cuidar tu bienestar.</h2>
+
+<p>
+
+Creemos que cada producto natural es una oportunidad para vivir de forma más saludable, responsable y en armonía con nuestro planeta.
+
+</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 EcoNatural • Todos los derechos reservados.</p>
+
+</footer>
+
+</body>
+</html>

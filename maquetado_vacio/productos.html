@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pure Skin</title>
+
+<style>
+
+body{
+font-family:Arial;
+background-color:#eef5ee;
+margin:0;
+}
+
+header{
+background:#a8c3a0;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.menu{
+width:220px;
+background:#dce8d8;
+height:100vh;
+float:left;
+}
+
+.menu ul{
+list-style:none;
+padding:0;
+margin:0;
+}
+
+.menu li{
+padding:15px;
+}
+
+.menu li:hover{
+background:#bdd3b6;
+}
+
+.menu a{
+text-decoration:none;
+color:#3d5a3c;
+font-weight:bold;
+}
+
+.contenido{
+margin-left:240px;
+padding:20px;
+}
+
+.caja{
+background:white;
+width:220px;
+padding:20px;
+margin:10px;
+border-radius:10px;
+display:inline-block;
+}
+
+table{
+width:100%;
+background:white;
+margin-top:20px;
+border-collapse:collapse;
+}
+
+th{
+background:#a8c3a0;
+color:white;
+padding:10px;
+}
+
+td{
+padding:10px;
+text-align:center;
+border-bottom:1px solid #ddd;
+}
+
+.boton{
+border:none;
+padding:8px 15px;
+border-radius:6px;
+color:white;
+cursor:pointer;
+margin:2px;
+}
+
+.editar{ background:#7da37a; }
+.eliminar{ background:#d9534f; }
+.registrar{ background:#5bc0de; }
+.rol{ background:#f0ad4e; }
+
+.seccion{
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Pure Skin</h1>
+<p>Panel Administrador</p>
+</header>
+
+
+<div class="menu">
+<ul>
+<li><a href="#">Inicio</a></li>
+<li><a href="#">Usuarios</a></li>
+<li><a href="#">Productos</a></li>
+<li><a href="#">Ventas</a></li>
+</ul>
+</div>
+
+
+<div class="contenido">
+
+<h2>Bienvenida Administradora</h2>
+
+
+<div class="caja">
+<h2>120</h2>
+<p>Pedidos</p>
+</div>
+
+<div class="caja">
+<h2>58</h2>
+<p>Usuarios</p>
+</div>
+
+<div class="caja">
+<h2>35</h2>
+<p>Productos</p>
+</div>
+
+
+
+<div class="seccion">
+
+<h3>Gestionar Usuarios</h3>
+
+<table>
+
+<tr>
+<th>Usuario</th>
+<th>Correo</th>
+<th>Rol</th>
+<th>Acciones</th>
+</tr>
+
+
+<tr>
+<td>Santiago Rivera</td>
+<td>santiago@gmail.com</td>
+<td>Administrador</td>
+
+<td>
+
+<button class="boton editar"
+onclick="editar(this)">
+Editar
+</button>
+
+<button class="boton eliminar"
+onclick="eliminar(this)">
+Eliminar
+</button>
+
+<button class="boton rol"
+onclick="rol(this)">
+Rol
+</button>
+
+</td>
+</tr>
+
+</table>
+
+<br>
+
+<button class="boton registrar"
+onclick="usuario()">
+Crear Usuario
+</button>
+
+</div>
+
+
+
+<div class="seccion">
+
+<h3>Gestionar Productos</h3>
+
+<table>
+
+<tr>
+<th>Producto</th>
+<th>Stock</th>
+<th>Precio</th>
+<th>Acciones</th>
+</tr>
+
+
+<tr>
+<td>Aloe Vera</td>
+<td>25</td>
+<td>10bs</td>
+
+<td>
+
+<button class="boton editar"
+onclick="editar(this)">
+Editar
+</button>
+
+<button class="boton eliminar"
+onclick="eliminar(this)">
+Eliminar
+</button>
+
+</td>
+</tr>
+
+</table>
+
+<br>
+
+<button class="boton registrar"
+onclick="producto()">
+Registrar Producto
+</button>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+function editar(boton){
+let fila = boton.closest("tr");
+let nuevo = prompt("Editar nombre:",fila.cells[0].innerHTML);
+if(nuevo){
+fila.cells[0].innerHTML = nuevo;
+}
+
+}
+
+function eliminar(boton){
+let fila = boton.closest("tr");
+let opcion = confirm("¿Deseas eliminar?");
+if(opcion){
+fila.remove();
+}
+
+}
+
+function rol(boton){
+let fila = boton.closest("tr");
+let nuevoRol = prompt("Nuevo rol:");
+if(nuevoRol){
+fila.cells[2].innerHTML = nuevoRol;
+}
+
+}
+
+function usuario(){
+let nombre = prompt("Ingrese nombre:");
+let correo = prompt("Ingrese correo:");
+let rol = prompt("Ingrese rol:");
+alert("Usuario creado" +"Nombre: " + nombre +"Correo: " + correo +"Rol: " + rol);
+
+}
+
+function producto(){
+let nombre = prompt("Producto:");
+let stock = prompt("Stock:");
+let precio = prompt("Precio:");
+alert("Producto creado" +"Producto: " + nombre +"Stock: " + stock +"Precio: " + precio);
+
+}
+
+</script>
+
+</body>
+</html>

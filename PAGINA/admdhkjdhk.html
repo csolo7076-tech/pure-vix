@@ -1,0 +1,338 @@
+<?php   
+include("conexion.php");
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administrador</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background-color: #eef5ee;
+            margin: 0;
+        }
+
+        header{
+            background-color: #a8c3a0;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .menu{
+            width: 220px;
+            background-color: #dce8d8;
+            height: 100vh;
+            float: left;
+        }
+
+        .menu ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li{
+            padding: 15px;
+        }
+
+        .menu li:hover{
+            background-color: #bdd3b6;
+        }
+
+        .menu a{
+            text-decoration: none;
+            color: #3d5a3c;
+            font-weight: bold;
+        }
+
+        .contenido{
+            margin-left: 240px;
+            padding: 20px;
+        }
+
+        .caja{
+            background-color: white;
+            width: 220px;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            vertical-align: top;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .caja h2{
+            color: #7da37a;
+        }
+
+        table{
+            width: 100%;
+            background-color: white;
+            margin-top: 20px;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th{
+            background-color: #a8c3a0;
+            color: white;
+            padding: 10px;
+        }
+
+        td{
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .boton{
+            border: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+            margin: 2px;
+        }
+
+        .editar{
+            background-color: #7da37a;
+        }
+
+        .editar:hover{
+            background-color: #648561;
+        }
+
+        .eliminar{
+            background-color: #d9534f;
+        }
+
+        .eliminar:hover{
+            background-color: #b52b27;
+        }
+
+        .registrar{
+            background-color: #5bc0de;
+        }
+
+        .registrar:hover{
+            background-color: #3997b3;
+        }
+
+        .rol{
+            background-color: #f0ad4e;
+        }
+
+        .rol:hover{
+            background-color: #d8922d;
+        }
+
+        .seccion{
+            margin-top: 40px;
+        }
+
+        h3{
+            color: #7da37a;
+        }
+
+    </style>
+</head>
+
+<body>
+    <?php session_start();?>
+
+    <header>
+        <h1>Pure Skin</h1>
+        <p>Panel de Administrador</p>
+    </header>
+
+    <div class="menu">
+
+        <ul>
+            <li><a href="maq_inicio.html">Inicio</a></li>
+            <li><a href="#">Gestionar Usuarios</a></li>
+            <li><a href="#">Gestionar Productos</a></li>
+            <li><a href="#">Ventas y Pedidos</a></li>
+            <li><a href="#">Reportes</a></li>
+            <li><a href="maq_pefilUsuario.html">Editar Perfil</a></li>
+        </ul>
+
+    </div>
+
+    <div class="contenido">
+
+        <h2>Bienvenida <?php echo $_SESSION['usuario'];?></h2>
+        <p>Aquí puedes administrar usuarios, productos, ventas y pedidos del sistema.</p>
+
+       
+        <div class="caja">
+            <h2>120</h2>
+            <p>Pedidos</p>
+        </div>
+
+        <div class="caja">
+            <h2>58</h2>
+            <p>Usuarios</p>
+        </div>
+
+        <div class="caja">
+            <h2>$350</h2>
+            <p>Ganancias</p>
+        </div>
+
+        <div class="caja">
+            <h2>35</h2>
+            <p>Productos</p>
+        </div>
+
+       
+        <div class="seccion">
+
+            <h3>Gestionar Usuarios</h3>
+
+            <table>
+
+                <tr>
+                    <th>Usuario</th>
+                    <th>Correo</th>
+                    <th>Rol</th>
+                    
+                </tr>
+                <?php
+                 $sql =" SELECT * FROM usuario";
+                 $resultado = $conexion->query($sql);
+                 if($resultado->num_rows > 0){
+                    while($fila = $resultado->fetch_assoc()){
+                        ?>
+                        <tr>
+                            <td><?=$fila['Nombre']?></td>
+                            <td><?=$fila['Correo']?></td>
+                            <td><?=$fila['Rol']?></td>
+                        <td>
+                            <a><button class
+                    }
+                 }
+            </table>
+
+            <br>
+            <a href="crud/registro.php">
+                <button class="boton registrar">Registrar Usuario</button>
+            </a>
+
+        </div>
+
+        
+        <div class="seccion">
+
+            <h3>Gestionar Productos</h3>
+
+            <table>
+
+                <tr>
+                    <th>Producto</th>
+                    <th>Stock</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+
+                <tr>
+                    <td>Mascarilla Aloe Vera</td>
+                    <td>25</td>
+                    <td>10bs</td>
+                    <td>
+                        <button class="boton editar">Editar</button>
+                        <button class="boton eliminar">Eliminar</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Mascarilla de Coco</td>
+                    <td>18</td>
+                    <td>12bs</td>
+                    <td>
+                        <button class="boton editar">Editar</button>
+                        <button class="boton eliminar">Eliminar</button>
+                    </td>
+                </tr>
+
+            </table>
+
+            <br>
+            <a href="crud/registro.php">
+                <button class="boton registrar">Registrar Producto</button>
+            </a>
+
+        </div>
+
+        
+        <div class="seccion">
+
+            <h3>Supervisar Ventas y Pedidos</h3>
+
+            <table>
+
+                <tr>
+                    <th>Cliente</th>
+                    <th>Producto</th>
+                    <th>Estado</th>
+                    <th>Total</th>
+                </tr>
+
+                <tr>
+                    <td>Gladis Reyes Montero</td>
+                    <td>Mascarilla Aloe Vera</td>
+                    <td>Entregado</td>
+                    <td>10bs</td>
+                </tr>
+
+                <tr>
+                    <td>Jertrudis Colacao Flipasa</td>
+                    <td>Mascarilla de Coco</td>
+                    <td>Pendiente</td>
+                    <td>12bs</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        
+        <div class="seccion">
+
+            <h3>Reportes del Sistema</h3>
+
+            <table>
+
+                <tr>
+                    <th>Reporte</th>
+                    <th>Descripción</th>
+                </tr>
+
+                <tr>
+                    <td>Ventas Mensuales</td>
+                    <td>Resumen de ventas realizadas durante el mes.</td>
+                </tr>
+
+                <tr>
+                    <td>Productos Más Vendidos</td>
+                    <td>Listado de productos con mayor demanda.</td>
+                </tr>
+
+                <tr>
+                    <td>Usuarios Registrados</td>
+                    <td>Total de administradores y vendedores registrados.</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

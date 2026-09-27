@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f6f0;
+    color: #4f5f52;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+body::before {
+    content: "";
+}
+
+h1 {
+    text-align: center;
+    color: #5f7d67;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin: 0 0 4px 0;
+}
+
+h2 {
+    text-align: center;
+    color: #5f7d67;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px 0;
+}
+
+h3 {
+    color: #5f7d67;
+    font-size: 15px;
+    margin: 20px 0 10px 0;
+}
+
+/* -----------------------------------
+   TICKET
+----------------------------------- */
+
+.ticket {
+    background: #ffffff;
+    width: 380px;
+    max-width: 100%;
+    padding: 30px 28px;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    border: 1px solid #dfe8df;
+}
+
+.ticket p {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 8px 0;
+    font-size: 14px;
+    color: #4f5f52;
+}
+
+.ticket p span:first-child,
+.ticket p::before {
+    color: #7d9b82;
+}
+
+hr {
+    border: none;
+    border-top: 1px dashed #b8c8b9;
+    margin: 18px 0;
+}
+
+/* -----------------------------------
+   LISTA DE PRODUCTOS
+----------------------------------- */
+
+.producto {
+    background: #f8f6f0;
+    border: 1px solid #dfe8df;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.producto .nombreProducto {
+    font-weight: bold;
+    color: #5f7d67;
+}
+
+.producto .detalleProducto {
+    color: #6b7a6e;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+/* -----------------------------------
+   TOTAL Y ESTADO
+----------------------------------- */
+
+.total {
+    text-align: right;
+    color: #5f7d67;
+    font-size: 18px;
+    margin-top: 16px;
+}
+
+.estado {
+    text-align: center;
+    background: #dfe8df;
+    color: #5f7d67;
+    border-radius: 25px;
+    padding: 8px 16px;
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+/* -----------------------------------
+   BOTONES
+----------------------------------- */
+
+.botonesRecibo {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.botonesRecibo button {
+    flex: 1;
+    padding: 12px 0;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+#volverProductos,
+button[onclick*="print"] {
+    background: #5f7d67;
+    color: white;
+}
+
+#volverProductos:hover,
+button[onclick*="print"]:hover {
+    background: #4d6855;
+    transform: scale(1.03);
+}
+
+/* Ocultar los botones al imprimir el ticket */
+@media print {
+    .botonesRecibo {
+        display: none;
+    }
+
+    .ticket {
+        box-shadow: none;
+        border: none;
+    }
+
+    body {
+        background: white;
+        padding: 0;
+    }
+}

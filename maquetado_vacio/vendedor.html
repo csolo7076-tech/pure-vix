@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background-color: #eef5ee;
+            margin: 0;
+        }
+
+        header{
+            background-color: #a8c3a0;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .menu{
+            width: 220px;
+            background-color: #dce8d8;
+            height: 100vh;
+            float: left;
+        }
+
+        .menu ul{
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu li{
+            padding: 15px;
+        }
+
+        .menu li:hover{
+            background-color: #bdd3b6;
+        }
+
+        .menu a{
+            text-decoration: none;
+            color: #3d5a3c;
+            font-weight: bold;
+        }
+
+        .contenido{
+            margin-left: 240px;
+            padding: 20px;
+        }
+
+        .caja{
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2{
+            color: #7da37a;
+        }
+
+        table{
+            width: 100%;
+            background-color: white;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th{
+            background-color: #a8c3a0;
+            color: white;
+            padding: 10px;
+        }
+
+        td{
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .estado-pendiente{
+            color: #d68a00;
+            font-weight: bold;
+        }
+
+        .estado-entregado{
+            color: green;
+            font-weight: bold;
+        }
+
+        .btn{
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            margin: 2px;
+            font-size: 13px;
+        }
+
+        .editar{
+            background-color: #7da37a;
+        }
+
+        .editar:hover{
+            background-color: #688b65;
+        }
+
+        .eliminar{
+            background-color: #d9534f;
+        }
+
+        .eliminar:hover{
+            background-color: #b52b27;
+        }
+
+        .actualizar{
+            background-color: #5bc0de;
+        }
+
+        .actualizar:hover{
+            background-color: #3997b3;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <h1></h1>
+        <p></p>
+    </header>
+
+    <div class="menu">
+
+        <ul>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+
+    </div>
+
+    <div class="contenido">
+
+        <div class="caja">
+            <h2></h2>
+            <p></p>
+        </div>
+
+        <div class="caja">
+
+            <h2></h2>
+
+            <table>
+
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="caja">
+
+            <h2></h2>
+
+            <table>
+
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="estado-entregado"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="estado-entregado"></td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="caja">
+
+            <h2></h2>
+
+            <table>
+
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="estado-pendiente"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="estado-pendiente"></td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="caja">
+
+            <h2></h2>
+
+            <table>
+
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="btn editar"></button>
+                        <button class="btn eliminar"></button>
+                        <button class="btn actualizar"></button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="btn editar"></button>
+                        <button class="btn eliminar"></button>
+                        <button class="btn actualizar"></button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="btn editar"></button>
+                        <button class="btn eliminar"></button>
+                        <button class="btn actualizar"></button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="btn editar"></button>
+                        <button class="btn eliminar"></button>
+                        <button class="btn actualizar"></button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

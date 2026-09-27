@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         header{
+            background-color: aquamarine;
+            grid-area: uno;
+         }
+
+         #dos{
+            background-color: blueviolet;
+grid-area: dos;
+         }
+
+         #tres{
+            background-color: blue;
+            grid-area: tres;
+         }
+
+
+         #cuatro{
+            background-color: coral;
+            grid-area: cuatro;
+         }
+
+         footer{
+            background-color: darkolivegreen;
+            grid-area: cinco;
+         }
+
+
+         body{
+            display: grid;
+            grid-template-rows: 200px 300px 300px 300px 200px;
+            grid-template-columns: 100%;
+            grid-template-areas: 
+            "uno"
+            "dos"
+            "tres"
+            "cuatro"
+            "cinco"; gap:  20px;
+         }
+
+    </style>
+</head>
+<body>
+     <header>1</header>
+
+
+<section id="dos">2</section>
+<section id="tres">3</section>
+<section id="cuatro">4</section>
+
+
+<footer>5</footer>
+
+    </body>
+
+
+
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title></title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#f8f4f1;
+}
+
+.menu{
+    width:230px;
+    height:100vh;
+
+    background:#c9a58b;
+
+    position:fixed;
+
+    padding-top:40px;
+}
+
+.menu h2{
+    text-align:center;
+    color:white;
+    margin-bottom:40px;
+    font-size:30px;
+}
+
+.menu ul{
+    list-style:none;
+}
+
+.menu li{
+    padding:18px 30px;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.menu li:hover{
+    background:rgba(255,255,255,0.2);
+}
+
+.contenido{
+    margin-left:230px;
+    padding:40px;
+}
+
+.titulo{
+    margin-bottom:40px;
+}
+
+.titulo h1{
+    font-size:55px;
+    color:#9d7155;
+}
+
+.titulo p{
+    color:#7b6a5d;
+    margin-top:10px;
+}
+
+.tarjetas{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+    margin-bottom:50px;
+}
+
+.tarjeta{
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.08);
+
+    transition:0.4s;
+}
+
+.tarjeta:hover{
+    transform:translateY(-8px);
+}
+
+.tarjeta h2{
+    color:#b08463;
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.tarjeta p{
+    color:#666;
+}
+
+.tabla{
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.08);
+}
+
+.tabla h2{
+    color:#9d7155;
+    margin-bottom:25px;
+    font-size:35px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#d8b8a0;
+    color:white;
+    padding:15px;
+}
+
+td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #eee;
+}
+
+button{
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:30px;
+
+    background:#c9a58b;
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.4s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    background:#b88f73;
+}
+
+@media(max-width:768px){
+
+    .menu{
+        width:100%;
+        height:auto;
+        position:relative;
+    }
+
+    .contenido{
+        margin-left:0;
+    }
+
+    .titulo h1{
+        font-size:40px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="menu">
+
+    <h2>PURE SKIN</h2>
+
+    <ul>
+        <li><a href="maq_inicio.html">Inicio</a></li>
+        <li>Ventas</li>
+    </ul>
+
+</div>
+
+<div class="contenido">
+
+    <div class="titulo">
+
+        <h1>Panel de Ventas</h1>
+
+        <p>
+            Administra las ventas y ganancias
+            de tu emprendimiento.
+        </p>
+
+    </div>
+
+    <div class="tarjetas">
+
+        <div class="tarjeta">
+
+            <h2>150</h2>
+
+            <p>Ventas realizadas</p>
+
+        </div>
+
+        <div class="tarjeta">
+
+            <h2>3500 Bs</h2>
+
+            <p>Ganancias del mes</p>
+
+        </div>
+
+        <div class="tarjeta">
+
+            <h2>85</h2>
+
+            <p>Clientes activos</p>
+
+        </div>
+
+    </div>
+
+    <div class="tabla">
+
+        <h2>Últimas Ventas</h2>
+
+        <table>
+
+            <tr>
+                <th>Cliente</th>
+                <th>Producto</th>
+                <th>Fecha</th>
+                <th>Total</th>
+                <th>Estado</th>
+            </tr>
+
+            <tr>
+                <td>Sofía Pérez</td>
+                <td>Mascarilla de Arroz</td>
+                <td>15/05/2026</td>
+                <td>10 Bs</td>
+                <td><button>Entregado</button></td>
+            </tr>
+
+            <tr>
+                <td>María López</td>
+                <td>Aloe Vera</td>
+                <td>14/05/2026</td>
+                <td>10 Bs</td>
+                <td><button>En camino</button></td>
+            </tr>
+
+            <tr>
+                <td>Camila Rojas</td>
+                <td>Mascarilla de Miel</td>
+                <td>13/05/2026</td>
+                <td>10 Bs</td>
+                <td><button>Preparando</button></td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>
